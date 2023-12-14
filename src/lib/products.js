@@ -7,6 +7,7 @@ const baseURL =
 export async function getProducts() {
   const response = await axios.get(baseURL, {
     responseType: "blob",
+    cache: "no-store",
   });
 
   const products = await new Promise((resolve, reject) => {
